@@ -89,7 +89,7 @@ class App extends Component {
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Hello world!!!'));
     return (
         <div className="App">
-          <Cockpit showPersons={this.state.showPersons} persons={this.state.persons} click={this.togglePersonHandler} />
+          <Cockpit showPersons={this.state.showPersons} personsLength={this.state.persons.length} click={this.togglePersonHandler} />
           {persons}
         </div>
     );
