@@ -29,6 +29,10 @@ class Persons extends React.Component{
     console.log('[Persons.js] componentDidMount snapshot value', snapshot);
   }
 
+  componentWillUnmount() {
+    console.log('[Persons.js] componentWillUnmount');
+  }
+
   render() {
     return this.props.persons.map((person, index) => {
       console.log('[Persons.js] rendering...');
