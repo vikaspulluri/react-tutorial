@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import classes from './Cockpit.css';
+import Aux from '../hoc/Aux';
 
 const Cockpit = (props) => {
   useEffect(() => {
@@ -21,11 +22,13 @@ const Cockpit = (props) => {
     classes.push('red');
   }
   return (
-    <div className={classes.Cockpit}>
-      <h1>Person manager!</h1>
-      <p className={classes.red}>This is working!</p>
-      <button className={btnClass} onClick={() => props.click()}>Toggle Persons</button>
-    </div>
+    <Aux>
+      <div className={classes.Cockpit}>
+        <h1>Person manager!</h1>
+        <p className={classes.red}>This is working!</p>
+        <button className={btnClass} onClick={() => props.click()}>Toggle Persons</button>
+      </div>
+    </Aux>
   );
 }
 
