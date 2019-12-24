@@ -11,7 +11,7 @@ const Cockpit = (props) => {
     }
     return (
         <div className={classes.Cockpit}>
-            <h1>Hello world!</h1>
+            <h1>Person manager!</h1>
             <p className={classes.red}>This is working!</p>
             <button className={btnClass} onClick={() => props.click()}>Toggle Persons</button>
         </div>
