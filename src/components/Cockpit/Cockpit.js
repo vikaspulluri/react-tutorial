@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import classes from './Cockpit.css';
-import Aux from '../hoc/Aux';
+import Aux from '../../hoc/Aux';
 
 const Cockpit = (props) => {
   useEffect(() => {

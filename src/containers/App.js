@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
+import WithClass from '../hoc/WithClass';
+import withId from '../hoc/withId';
 
 class App extends Component {
   constructor(props) {
@@ -12,7 +14,8 @@ class App extends Component {
   state = {
     persons: [
       {id: 1, name: 'Vikas', age: 25},
-      {id: 2, name: 'Vicky', age: 24}
+      {id: 2, name: 'Vicky', age: 24},
+      {id: 3, name: 'John', age: 26}
     ],
     otherState: 'some random value',
     showPersons: false
@@ -88,12 +91,12 @@ class App extends Component {
 
     // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Hello world!!!'));
     return (
-        <div className="App">
+        <WithClass classes="App">
           <Cockpit showPersons={this.state.showPersons} personsLength={this.state.persons.length} click={this.togglePersonHandler} />
           {persons}
-        </div>
+        </WithClass>
     );
   }
 }
 
-export default App;
+export default withId(App, 'fakeid');
